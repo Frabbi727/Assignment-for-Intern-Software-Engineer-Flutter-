@@ -26,11 +26,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //int _currentIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     bottomNavigationBar: BottomNavigationBar(
+       
+       type: BottomNavigationBarType.fixed,
+       //currentIndex: _currentIndex,
+        items: <BottomNavigationBarItem>[
+          
+          BottomNavigationBarItem(icon: Icon(Icons.home, color: Color(0xffEF7822),), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite, color: Colors.grey,), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_rounded, size: 30, color: Color(0xffEF7822),  ), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark, color: Colors.grey,), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.line_weight_sharp, color: Colors.grey,), label: ''),
+        ],
+        // onTap: (index){
+        //   setState(() {
+        //     _currentIndex=index;
+        //   });
+        // }
+      ),
       backgroundColor: Colors.grey[90],
       body: SingleChildScrollView(
+        
         child: Container(
           padding: EdgeInsets.all(10),
           child: Column(
@@ -318,7 +338,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-              // Categories Start From Here
+              // Food Campaign Start From Here
               Container(
                 child: Column(
                   children: <Widget>[
@@ -327,7 +347,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Categories',
+                            'Food Campaign',
                             style: TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.bold),
                           ),
@@ -345,7 +365,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Container(
-                      height: 120,
+                      height: 130,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
@@ -741,7 +761,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Container(
-                      height: 220,
+                      height: 250,
 
                       //decoration: BoxDecoration(color: Colors.indigo),
                       child: ListView(
@@ -883,14 +903,14 @@ class _MyHomePageState extends State<MyHomePage> {
                               ],
                             ),
                           ),
-                         
                         ],
                       ),
                     )
                   ],
                 ),
               ),
-              Container(child:  Column(
+              Container(
+                child: Column(
                   children: <Widget>[
                     Container(
                       child: Row(
@@ -915,7 +935,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Container(
-                      height: 220,
+                      height: 250,
 
                       //decoration: BoxDecoration(color: Colors.indigo),
                       child: ListView(
@@ -1057,12 +1077,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               ],
                             ),
                           ),
-                         
                         ],
                       ),
                     )
                   ],
-                ),),
+                ),
+              ),
               Container(child: Text('ALL rasturant')),
             ],
           ),
