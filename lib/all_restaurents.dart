@@ -44,14 +44,19 @@ class _All_RestaurentsState extends State<All_Restaurents> {
           ),
           Container(
             height: 300,
+            
             margin: EdgeInsets.all(5),
            
             child: ListView(
               scrollDirection: Axis.vertical,
+              
               children: <Widget>[
                 //start here
                 Container(
                   height: 100,
+                  
+                  
+
 
                   // decoration:
                   //     BoxDecoration(color: Colors.yellow), //colour delete here
@@ -89,10 +94,10 @@ class _All_RestaurentsState extends State<All_Restaurents> {
                           ],
                         ),
                       ),
-                      Container(
-                        width: 150,
+                      Expanded(
+                        
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                       mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
                             IconButton(
                               onPressed: null,
@@ -147,8 +152,8 @@ class _All_RestaurentsState extends State<All_Restaurents> {
                           ],
                         ),
                       ),
-                      Container(
-                        width: 150,
+                      Expanded(
+                       
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
@@ -205,8 +210,8 @@ class _All_RestaurentsState extends State<All_Restaurents> {
                           ],
                         ),
                       ),
-                      Container(
-                        width: 150,
+                      Expanded(
+                     
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
@@ -264,8 +269,8 @@ class _All_RestaurentsState extends State<All_Restaurents> {
                           ],
                         ),
                       ),
-                      Container(
-                        width: 150,
+                      Expanded(
+                        
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[

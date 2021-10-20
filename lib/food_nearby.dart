@@ -35,12 +35,13 @@ class _FoodNearByState extends State<FoodNearBy> {
             ),
           ),
           Container(
-            height: 130,
+            //decoration: BoxDecoration(color: Colors.green),
+            height: 150,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(5),
+                  //padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     //color: Colors.red,
                     borderRadius: BorderRadius.circular(10),
@@ -56,10 +57,11 @@ class _FoodNearByState extends State<FoodNearBy> {
                   ),
                   margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start, //=
                     children: <Widget>[
                       Container(
-                        height: 80,
-                        width: 60,
+                        height: 130, //a
+                        width: 130,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage('assets/Rectangle 187.png'),
@@ -68,7 +70,9 @@ class _FoodNearByState extends State<FoodNearBy> {
                       ),
                       Container(
                         padding: EdgeInsets.all(5),
+                        margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start, //=
                           children: <Widget>[
                             Text(
                               'Burger',
@@ -76,10 +80,17 @@ class _FoodNearByState extends State<FoodNearBy> {
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                             Text('Mc Donald, New york, USA'),
-                            Text('data'),
-                            Container(
+                            
+                             Text(
+                              '*****',
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xffEF7822)),
+                            ),
+                            Expanded(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Text('\$5'),
                                   IconButton(
@@ -93,6 +104,8 @@ class _FoodNearByState extends State<FoodNearBy> {
                     ],
                   ),
                 ),
+                //1st end
+                //2nd start
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
@@ -110,10 +123,11 @@ class _FoodNearByState extends State<FoodNearBy> {
                   ),
                   margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start, //=
                     children: <Widget>[
                       Container(
-                        height: 80,
-                        width: 60,
+                        height: 130,
+                        width: 130,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage('assets/Rectangle 187.png'),
@@ -123,6 +137,7 @@ class _FoodNearByState extends State<FoodNearBy> {
                       Container(
                         padding: EdgeInsets.all(5),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start, //=
                           children: <Widget>[
                             Text(
                               'Burger',
@@ -130,7 +145,14 @@ class _FoodNearByState extends State<FoodNearBy> {
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                             Text('Mc Donald, New york, USA'),
-                            Text('data'),
+                            
+                             Text(
+                              '*****',
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xffEF7822)),
+                            ),
                             Container(
                               child: Row(
                                 mainAxisAlignment:

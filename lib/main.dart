@@ -12,6 +12,7 @@ import './new_on_app.dart';
 import './food_campaign.dart';
 import './food_nearby.dart';
 import './sliding_menu.dart';
+import './top_searchbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -85,74 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              Container(
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
-                      child: Icon(
-                        Icons.home,
-                        color: Color(0xff9f9f9f),
-                      ),
-                    ),
-                    Expanded(
-                      child: TextField(
-                          decoration: InputDecoration(
-                        hintText: '76A eighth evenue, New York, US',
-                        border: InputBorder.none,
-                      )),
-                    ),
-                    Container(
-                      child: ImageIcon(
-                        AssetImage('assets/notification 1.png'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //sliding Menue
-              Container(
-                margin: EdgeInsets.all(10),
-                // padding: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    color: Color(0xffFFFFFF),
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(
-                            5.0,
-                            5.0,
-                          ), //(x,y)
-                          blurRadius: 6.0)
-                    ]),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintStyle: TextStyle(fontSize: 17),
-                    hintText: 'Search food or restaurent here...',
-                    suffixIcon: Icon(
-                      Icons.search,
-                      color: Colors.grey,
-                    ),
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.all(20),
-                  ),
-                ),
-              ),
-
+              TopAndSearchBar(),
               SlidingMenu(),
-
               Categories(),
-
               FoodNearBy(),
-
               FoodCampaign(),
-
               PopularRestaurants(),
-
               NewOnApp(),
-
               All_Restaurents(),
             ],
           ),
