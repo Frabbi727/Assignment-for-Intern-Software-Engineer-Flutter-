@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+
 
 class SlidingMenu extends StatefulWidget {
   SlidingMenu({Key? key}) : super(key: key);
@@ -31,6 +33,7 @@ class _SlidingMenuState extends State<SlidingMenu> {
             height: 200,
             width: 200,
             decoration: BoxDecoration(
+              
               image: DecorationImage(
                 image: AssetImage('assets/Rectangle 35.png'),
                 fit: BoxFit.fill,

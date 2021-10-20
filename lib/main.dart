@@ -1,18 +1,19 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:food_delivery_app/categories.dart';
+
+import './categories.dart';
 import './all_restaurents.dart';
 import './popualr_restaurant.dart';
 import './new_on_app.dart';
 import './food_campaign.dart';
 import './food_nearby.dart';
 import './sliding_menu.dart';
-import './top_searchbar.dart';
+import './searchbar.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,36 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 10,
+        backgroundColor: Colors.white,
+        title: Container(child:  Row(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
+            child: Icon(
+              Icons.home,
+              color: Color(0xff9f9f9f),
+            ),
+          ),
+          Expanded(
+            child: TextField(
+                decoration: InputDecoration(
+              hintText: '76A eighth evenue, New York, US',
+              border: InputBorder.none,
+            )),
+          ),
+          Container(
+            child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.notification_add_sharp,
+                  color: Color(0xff9f9f9f),
+                )),
+          ),
+        ],
+      ),),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         //currentIndex: _currentIndex,

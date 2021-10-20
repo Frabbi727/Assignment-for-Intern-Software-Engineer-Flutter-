@@ -12,31 +12,7 @@ class _TopAndSearchBarState extends State<TopAndSearchBar> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(children:<Widget> [
-        Container(
-            child: Row(
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
-                  child: Icon(
-                    Icons.home,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                Expanded(
-                  child: TextField(
-                      decoration: InputDecoration(
-                    hintText: '76A eighth evenue, New York, US',
-                    border: InputBorder.none,
-                  )),
-                ),
-                Container(
-                  child: ImageIcon(
-                    AssetImage('assets/notification 1.png'),
-                  ),
-                ),
-              ],
-            ),
-          ),
+     
           Container(
             margin: EdgeInsets.all(10),
             // padding: EdgeInsets.all(5),
@@ -55,7 +31,7 @@ class _TopAndSearchBarState extends State<TopAndSearchBar> {
             child: TextField(
               decoration: InputDecoration(
                 hintStyle: TextStyle(fontSize: 17),
-                hintText: 'Search food or restaurent here...',
+                hintText: 'Search food or restaurant here...',
                 suffixIcon: Icon(
                   Icons.search,
                   color: Colors.grey,
